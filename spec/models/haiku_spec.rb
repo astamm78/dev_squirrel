@@ -35,4 +35,14 @@ describe Haiku do
     haiku.updated_at.should_not eq haiku.created_at
   end
 
+  it "should return its tag objects" do
+    haiku = Haiku.create( :line_1   => "line one",
+                          :line_2   => "line two",
+                          :line_3 => "line three")
+    tag = Tag.create(   :tag    => "butter",
+                        :tagable_id => haiku.id,
+                        :tagable_type => haiku.class.to_s.capitalize)
+    haiku.tags.should eq [tag]
+  end
+
 end
