@@ -25,4 +25,13 @@ describe Post do
     post.updated_at.should_not eq post.created_at
   end
 
+  it "should return its tag objects" do
+    post = Post.create( :body   => "This is the post body",
+                        :title  => "This is the post title")
+    tag = Tag.create(   :tag    => "butter",
+                        :tagable_id => post.id,
+                        :tagable_type => post.class.to_s.capitalize)
+    post.tags.should eq [tag]
+  end
+
 end
