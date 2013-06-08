@@ -4,4 +4,6 @@ class Tag < ActiveRecord::Base
 
   validates :tag, :tagable_id, :tagable_type, :presence => true
 
+  belongs_to :tagable, :polymorphic => true
+
 end

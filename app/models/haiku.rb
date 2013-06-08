@@ -4,4 +4,6 @@ class Haiku < ActiveRecord::Base
 
   validates :line_1, :line_2, :line_3, :presence => true
 
+  has_many :tags, :as => :tagable
+
 end
