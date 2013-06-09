@@ -1,6 +1,6 @@
 DevSquirrel::Application.routes.draw do
 
-  resources :posts
+  resources :posts, :haikus
 
   namespace :dev do
     resources :links
