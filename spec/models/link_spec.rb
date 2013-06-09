@@ -18,13 +18,4 @@ describe Link do
     link.should_not be_valid
   end
 
-  it "should return its tag objects" do
-    link = Link.create( :url  => "www.devsquirrel.com",
-                        :name => "Dev Squirrel")
-    tag = Tag.create(   :tag    => "butter",
-                        :tagable_id => link.id,
-                        :tagable_type => link.class.to_s.capitalize)
-    link.tags.should eq [tag]
-  end
-
 end
