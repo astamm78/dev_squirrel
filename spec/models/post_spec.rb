@@ -28,9 +28,7 @@ describe Post do
   it "should return its tag objects" do
     post = Post.create( :body   => "This is the post body",
                         :title  => "This is the post title")
-    tag = Tag.create(   :tag    => "butter",
-                        :tagable_id => post.id,
-                        :tagable_type => post.class.to_s.capitalize)
+    tag = post.tags.create(   :tag    => "butter")
     post.tags.should eq [tag]
   end
 
