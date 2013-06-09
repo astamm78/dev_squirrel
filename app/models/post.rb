@@ -6,4 +6,6 @@ class Post < ActiveRecord::Base
 
   has_many :tags, :as => :tagable
 
+  self.per_page = 4
+
 end
