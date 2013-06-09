@@ -25,7 +25,7 @@ describe 'nav links' do
     it "should link to the haiku page" do
       visit root_path
       click_link "haiku"
-      page.should have_content("Haikus")
+      page.should have_content("DevSquirrel Haikus")
     end
 
     it "should link to the photo page" do
