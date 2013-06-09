@@ -43,4 +43,15 @@ describe "Blog Page" do
     page.should have_css('div.pagination')
   end
 
+  it "should have a link to a single post page" do
+    visit posts_path
+    page.should have_link('Test Post')
+  end
+
+  it "should link to a single blog post" do
+    visit posts_path
+    click_link('Test Post')
+    page.should have_css('h2#single_post_title')
+  end
+
 end
