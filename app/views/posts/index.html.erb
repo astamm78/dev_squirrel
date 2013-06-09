@@ -13,7 +13,7 @@
     </ul>
     <% end %>
   <% end %>
-  <%= will_paginate @posts %>
+  <%= will_paginate @posts, :previous_label => ("Prev"), :next_label => ("Next") %>
 <% else %>
   <p>There are no posts to display</p>
 <% end %>
