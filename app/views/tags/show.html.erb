@@ -1,1 +1,9 @@
-<h2>Tags page for: <%= @tag.tag %></h2>
+<h2>Blog posts with tag: <%= @tag.tag %></h2>
+
+<% if @posts %>
+  <% @posts.each do |post| %>
+    <h3><%= link_to post.title, post_path(post) %></h3>
+  <% end %>
+<% else %>
+  <h3>There are not posts with this tag</h3>
+<% end %>
