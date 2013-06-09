@@ -1,6 +1,7 @@
 <% if @post %>
   <h2 id="single_post_title"><%= @post.title %></h2>
   <p><%= @post.body %></p>
+  <p id="single_created_at">Posted on: <%= @post.created_at %></p>
   <% if @post.tags.count > 0 %>
     <ul id="single_post_tags">
       <% @post.tags.each do |tag| %>
