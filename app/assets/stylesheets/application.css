@@ -11,3 +11,63 @@
  *= require_self
  *= require_tree .
  */
+
+html {
+  background: #00aeef url('/assets/background.jpg') top repeat-x;
+  height: 100%;
+}
+
+body {
+  background: url('/assets/squirrel_back.jpg') top center no-repeat;
+  min-height: 100%;
+}
+
+header h1 a {
+  display: block;
+  height: 92px;
+  position: absolute;
+    right: 0;
+  text-indent: -999999px;
+  width: 770px;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 900px;
+}
+
+body.home #home_nav {
+  position: absolute;
+    right: 0;
+    top: 120px;
+  text-align: right;
+}
+
+body.home #home_nav li a {
+  color: #fff000;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 72px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+body.home #home_nav li a:hover {
+  color: #ec008c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
