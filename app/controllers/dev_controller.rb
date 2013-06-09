@@ -1,7 +1,7 @@
 class DevController < ApplicationController
 
   def index
-    @title = "My Developer Projects"
+    @title = "My Development Projects"
   end
 
 end
