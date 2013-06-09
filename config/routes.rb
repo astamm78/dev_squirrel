@@ -1,6 +1,7 @@
 DevSquirrel::Application.routes.draw do
 
-  resources :posts, :haikus, :photos
+  resources :posts, :haikus, :photos, :admins
+  resources :sessions, :only => [:create]
 
   namespace :dev do
     resources :links
@@ -11,5 +12,8 @@ DevSquirrel::Application.routes.draw do
   get "/about" => 'about#index', :as => 'about'
 
   get "/dev" => 'dev#index', :as => 'dev'
+
+  get "/narwhal" => "sessions#index"
+  get "/logout" => "sessions#destroy", :as => 'logout'
 
 end
