@@ -18,6 +18,15 @@
 
   <header>
     <h1><%= link_to "DevSquirrel", root_path, :class => "home_link" %></h1>
+
+    <ul id="home_nav">
+      <li><%= link_to "about", about_path %></li>
+      <li><%= link_to "blog", posts_path %></li>
+      <li><%= link_to "dev", dev_path %></li>
+      <li><%= link_to "haiku", haikus_path %></li>
+      <li><%= link_to "photo", photos_path %></li>
+    </ul>
+
   </header>
 
   <%= yield %>
