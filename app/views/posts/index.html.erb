@@ -2,7 +2,7 @@
 
 <% if Post.all.count > 0 %>
   <% @posts.each do |post| %>
-    <h3 class="post_title"><%= post.title %></h3>
+    <h3 class="post_title"><%= link_to post.title, post_path(post), :class => "post_link" %></h3>
     <p><%= post.body %></p>
     <p class="post_time">Posted on: <%= post.created_at %></p>
     <% if post.tags.count > 0 %>
