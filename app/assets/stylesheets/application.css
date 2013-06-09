@@ -37,6 +37,29 @@ header h1 a {
   width: 900px;
 }
 
+#home_nav {
+  padding: 0 0 0 230px;
+  position: absolute;
+    top: 120px;
+}
+
+#home_nav li {
+  display: inline-block;
+}
+
+#home_nav li a {
+  color: #fff000;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 48px;
+  margin: 0 0 0 20px;
+  text-decoration: none;
+  text-align: right;
+}
+
+#home_nav li a:hover {
+  color: #ec008c;
+}
+
 body.home #home_nav {
   position: absolute;
     right: 0;
@@ -44,18 +67,14 @@ body.home #home_nav {
   text-align: right;
 }
 
+body.home #home_nav li {
+  display: block;
+}
+
 body.home #home_nav li a {
-  color: #fff000;
-  font-family: 'Source Sans Pro', sans-serif;
+  display: block;
   font-size: 72px;
-  line-height: 60px;
-  text-decoration: none;
 }
-
-body.home #home_nav li a:hover {
-  color: #ec008c;
-}
-
 
 
 
