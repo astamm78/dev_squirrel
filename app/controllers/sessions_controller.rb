@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
   def index
     @title = "Admin"
+    @body_class = "admin"
   end
 
   def create
