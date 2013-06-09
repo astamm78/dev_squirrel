@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DevSquirrel</title>
+
+  <% if @title %>
+    <title>DevSquirrel | <%= @title %></title>
+  <% else %>
+    <title>DevSquirrel</title>
+  <% end %>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
+
 <body>
 
-<%= yield %>
+  <header>
+    <h1><%= link_to "DevSquirrel", root_path, :class => "home_link" %></h1>
+  </header>
+
+  <%= yield %>
 
 </body>
 </html>
