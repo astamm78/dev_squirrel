@@ -2,39 +2,42 @@ require 'spec_helper'
 
 describe "Blog Page" do
 
-  let(:post) { Post.create( :title  => "Post Title",
-                            :body   => "Post Body") }
-
-  let(:tag) { Tag.create(   :tag          => "tag",
-                            :tagable_type => post.class,
-                            :tagable_id   => post.id) }
+  before(:each) do
+    10.times do
+      post = Post.create( :title => Faker::Lorem.sentence,
+                          :body => Faker::Lorem.sentence)
+      2.times do
+        Tag.create(   :tag  => Faker::Lorem.word,
+                      :tagable_type => post.class.to_s,
+                      :tagable_id   => post.id)
+      end
+    end
+    test = Post.create( :title => "Test Post", :body => "Post Body")
+  end
 
   it "should display recent blog posts" do
     visit posts_path
-    page.should have_content("Post Title")
+    page.should have_css('h3.post_title')
   end
 
   it "should display when each blog was posted" do
     visit posts_path
-    page.should have_content(post.created_at)
+    page.should have_content("Posted on:")
   end
 
   it "should display tags for each blog" do
     visit posts_path
-    page.should have_content("tag")
+    page.should have_css('ul.tags')
   end
 
   it "should display tags as links" do
     visit posts_path
-    page.should have_link("tag")
+    page.should have_css('a.tag_link')
   end
 
   it "should have links to more blog posts" do
-    10.times do Post.create(  :title => Faker::Lorem.sentence,
-                              :body => Faker::Lorem.sentence)
-    end
     visit posts_path
-    page.should have_link("Next")
+    page.should have_css('div.pagination')
   end
 
 end
