@@ -46,9 +46,9 @@ body.home #home_nav {
 
 body.home #home_nav li a {
   color: #fff000;
-  font-family: 'Paytone One', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 72px;
-  line-height: 30px;
+  line-height: 60px;
   text-decoration: none;
 }
 
