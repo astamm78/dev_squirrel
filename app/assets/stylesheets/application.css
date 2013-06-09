@@ -38,7 +38,7 @@ header h1 a {
 }
 
 #home_nav {
-  padding: 0 0 0 230px;
+  padding: 0 0 0 280px;
   position: absolute;
     top: 120px;
 }
@@ -51,12 +51,19 @@ header h1 a {
   color: #fff000;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 48px;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 10px;
   text-decoration: none;
   text-align: right;
 }
 
-#home_nav li a:hover {
+#home_nav li a:hover,
+body.about #home_nav li a.about_link,
+body.blog #home_nav li a.blog_link,
+body.posts #home_nav li a.blog_link,
+body.tags #home_nav li a.blog_link,
+body.dev #home_nav li a.dev_link,
+body.haiku #home_nav li a.haiku_link,
+body.photo #home_nav li a.photo_link {
   color: #ec008c;
 }
 
@@ -74,6 +81,10 @@ body.home #home_nav li {
 body.home #home_nav li a {
   display: block;
   font-size: 72px;
+}
+
+#content {
+  padding: 200px 0 0;
 }
 
 
