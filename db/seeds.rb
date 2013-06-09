@@ -1,3 +1,6 @@
+Post.delete_all
+Tag.delete_all
+
 20.times do
 
   post = Post.create(  :title => Faker::Lorem.sentence,
@@ -5,9 +8,7 @@
 
   2.times do
 
-    Tag.create( :tag => Faker::Lorem.word,
-                :tagable_type => post.class.to_s,
-                :tagable_id => post.id)
+    post.tags.create( :tag => Faker::Lorem.word)
 
   end
 
