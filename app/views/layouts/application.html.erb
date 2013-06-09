@@ -9,33 +9,40 @@
   <% end %>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
 </head>
 
-<body>
+<% if @body_class %>
+  <body class="<%= @body_class %>">
+<% else %>
+  <body class="home">
+<% end %>
 
-  <header>
-    <h1><%= link_to "DevSquirrel", root_path, :class => "home_link" %></h1>
+  <div class="container">
+    <header>
+      <h1><%= link_to "DevSquirrel", root_path, :class => "home_link" %></h1>
 
-    <ul id="home_nav">
-      <li><%= link_to "about", about_path %></li>
-      <li><%= link_to "blog", posts_path %></li>
-      <li><%= link_to "dev", dev_path %></li>
-      <li><%= link_to "haiku", haikus_path %></li>
-      <li><%= link_to "photo", photos_path %></li>
-    </ul>
+      <ul id="home_nav">
+        <li><%= link_to "about", about_path %></li>
+        <li><%= link_to "blog", posts_path %></li>
+        <li><%= link_to "dev", dev_path %></li>
+        <li><%= link_to "haiku", haikus_path %></li>
+        <li><%= link_to "photo", photos_path %></li>
+      </ul>
 
-  </header>
+    </header>
 
-  <%= yield %>
+    <%= yield %>
 
-  <footer>
-    <% if current_user %>
-      <p>You are logged in as <%= current_user.full_name %> | <%= link_to "Log Out", logout_path %></p>
-    <% end %>
-  </footer>
+    <footer>
+      <% if current_user %>
+        <p>You are logged in as <%= current_user.full_name %> | <%= link_to "Log Out", logout_path %></p>
+      <% end %>
+    </footer>
+  </div>
 
 </body>
 </html>
