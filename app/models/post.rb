@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 
   validates :title, :body, :presence => true
 
-  has_many :tags, :as => :tagable
+  has_and_belongs_to_many :tags
 
   self.per_page = 4
 

@@ -7,12 +7,15 @@ describe "Blog Page" do
       post = Post.create( :title => Faker::Lorem.sentence,
                           :body => Faker::Lorem.sentence)
       2.times do
-        Tag.create(   :tag  => Faker::Lorem.word,
-                      :tagable_type => post.class.to_s,
-                      :tagable_id   => post.id)
+        post.tags.create(   :tag  => Faker::Lorem.word)
       end
     end
     test = Post.create( :title => "Test Post", :body => "Post Body")
+  end
+
+  after(:each) do
+    Post.delete_all
+    Tag.delete_all
   end
 
   it "should display recent blog posts" do

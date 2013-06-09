@@ -1,9 +1,14 @@
 class Tag < ActiveRecord::Base
 
-  attr_accessible :tag, :tagable_id, :tagable_type
+  attr_accessible :tag
 
-  validates :tag, :tagable_id, :tagable_type, :presence => true
+  validates :tag, :presence => true
+  validates :tag, :uniqueness => true
 
-  belongs_to :tagable, :polymorphic => true
+  has_and_belongs_to_many :posts
+
+  def blogs
+    Blog.where()
+  end
 
 end
