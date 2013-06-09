@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Tags Pages" do
+describe "On Tags Pages" do
 
   after(:each) do
     Post.delete_all
@@ -29,6 +29,22 @@ describe "Tags Pages" do
     post.tags << tag
     visit tag_path(tag)
     page.should have_link('Tag Test')
+  end
+
+  it "should have the correct body class" do
+    post = Post.create(:title => "Tag Test", :body => "Tag Test Body")
+    tag = Tag.create(:tag => "RSPEC")
+    post.tags << tag
+    visit tag_path(tag)
+    page.should have_css('body.tags')
+  end
+
+  it "should have the proper title on the Tag page" do
+    post = Post.create(:title => "Tag Test", :body => "Tag Test Body")
+    tag = Tag.create(:tag => "RSPEC")
+    post.tags << tag
+    visit tag_path(tag)
+    expect(page).to have_title "DevSquirrel | RSPEC"
   end
 
 end

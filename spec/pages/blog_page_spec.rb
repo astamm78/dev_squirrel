@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Blog Page" do
+describe "On Blog Page" do
 
   before(:each) do
     10.times do
@@ -52,6 +52,16 @@ describe "Blog Page" do
     visit posts_path
     click_link('Test Post')
     page.should have_css('h2#single_post_title')
+  end
+
+  it "should have the correct body class" do
+    visit posts_path
+    page.should have_css('body.blog')
+  end
+
+  it "should have the proper title on the Blog page" do
+    visit posts_path
+    expect(page).to have_title "DevSquirrel | DevSquirrel Blog"
   end
 
 end
