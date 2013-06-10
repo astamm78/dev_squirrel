@@ -13,4 +13,18 @@ class PostsController < ApplicationController
     @title = @post.title
   end
 
+  def create
+    post = Post.create( :title  => params[:post][:title],
+                        :body   => params[:post][:body])
+    if post.save
+      params[:post][:tags].split(" ").each do |tag|
+        post.tags.create(:tag => tag)
+      end
+      redirect_to posts_path
+    else
+      flash[:errors] = "Please enter all fields"
+      redirect_to admins_path
+    end
+  end
+
 end

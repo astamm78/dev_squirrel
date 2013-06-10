@@ -1,5 +1,9 @@
 <h2><%= current_user.full_name %> Admin Page</h2>
 
+<% if flash[:errors] %>
+  <p class="errors"><%= flash[:errors] %></p>
+<% end %>
+
 <%= form_for @post do |p| %>
   <%= p.label :title, "Title" %>
   <%= p.text_field :title, :placeholder => "Post Title" %>
