@@ -143,8 +143,31 @@ button:hover {
   cursor: pointer;
 }
 
+footer {
+  color: white;
+  height: 20px;
+  margin: 0 auto;
+  padding-top: 40px !important;
+  text-align: center;
+  width: 900px;
+}
 
+body.home footer {
+  position: fixed;
+  bottom: 20px;
+}
 
+footer p {
+  font-family: sans-serif;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #ec008c;
+}
 
 
 

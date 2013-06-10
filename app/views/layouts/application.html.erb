@@ -35,11 +35,13 @@
 
     </header>
 
-    <div id="content">
-      <div class="styled_box">
-        <%= yield %>
+    <% unless !@body_class %>
+      <div id="content">
+        <div class="styled_box">
+          <%= yield %>
+        </div>
       </div>
-    </div>
+    <% end %>
 
     <footer>
       <% if current_user %>
