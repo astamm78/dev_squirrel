@@ -1,5 +1,12 @@
 <h2><%= current_user.full_name %> Admin Page</h2>
 
+<ul id="new_content">
+  <li><a class="new_post" href="#">New Post</a></li>
+  <li><a class="new_dev" href="#">New Dev Link</a></li>
+  <li><a class="new_haiku" href="#">New Haiku</a></li>
+  <li><a class="new_photo" href="#">New Photo</a></li>
+</ul>
+
 <% if flash[:errors] %>
   <p class="errors"><%= flash[:errors] %></p>
 <% end %>

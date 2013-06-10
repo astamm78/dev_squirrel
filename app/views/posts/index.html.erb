@@ -6,7 +6,7 @@
     <% post.body.split("\r\n").each do |p| %>
       <p><%= p %></p>
     <% end %>
-    <p class="post_time">Posted on: <%= post.created_at %></p>
+    <p class="post_time">Posted on: <%= post.posted_on %></p>
     <% if post.tags.count > 0 %>
     <ul class="tags">
       <% post.tags.each do |tag| %>
