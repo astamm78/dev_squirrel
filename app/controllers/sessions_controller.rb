@@ -1,8 +1,12 @@
 class SessionsController < ApplicationController
 
   def index
-    @title = "Admin"
-    @body_class = "admin"
+    if session[:user_id]
+      redirect_to admins_path
+    else
+      @title = "Admin"
+      @body_class = "admin"
+    end
   end
 
   def create
