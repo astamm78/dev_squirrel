@@ -98,10 +98,13 @@ body.home #home_nav li a {
 }
 
 #content h2 {
-  color: #ec008c;
+  border-bottom: solid 2px rgba(20, 20, 20, .25);
+  color: rgba(236, 0, 140, .35);
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 48px;
-  margin: 0 0 20px;
+  font-size: 68px;
+  letter-spacing: -10px;
+  line-height: 46px;
+  margin: 18px 0 30px;
 }
 
 #content label {
@@ -143,6 +146,19 @@ button {
 button:hover {
   background: #00aeef;
   cursor: pointer;
+}
+
+#content p.line_one,
+#content p.line_two,
+#content p.line_three {
+  color: gray;
+  font-size: 54px;
+  line-height: 74px;
+  text-align: center;
+}
+
+.haiku {
+  margin: 0 0 20px;
 }
 
 footer {
