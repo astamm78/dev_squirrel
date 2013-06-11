@@ -6,4 +6,8 @@ class Haiku < ActiveRecord::Base
 
   has_many :tags, :as => :tagable
 
+  def self.stale
+    Time.now - self.order("updated_at DESC").last.updated_at > 60 * 60 * 3
+  end
+
 end
