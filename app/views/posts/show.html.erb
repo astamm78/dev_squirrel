@@ -6,7 +6,7 @@
   <% end %>
   <p class="post_time">Posted on: <%= @post.posted_on %></p>
   <% if @post.tags.count > 0 %>
-    <ul id="single_post_tags">
+    <ul class="tags">
       <% @post.tags.each do |tag| %>
         <li><%= link_to tag.tag, tag_path(tag) %></li>
       <% end %>
