@@ -9,7 +9,8 @@ class Post < ActiveRecord::Base
   self.per_page = 4
 
   def posted_on
-    self.created_at.strftime("%B %d, %Y")
+    time = self.created_at - 6.hours
+    time.strftime("%B %d, %Y")
   end
 
 end
