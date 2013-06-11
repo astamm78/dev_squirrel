@@ -2,6 +2,7 @@
 
 <% if Post.all.count > 0 %>
   <% @posts.each do |post| %>
+    <div class="post">
     <h3 class="post_title"><%= link_to post.title, post_path(post), :class => "post_link" %></h3>
     <% post.body.split("\r\n").each do |p| %>
       <p><%= p %></p>
@@ -9,11 +10,13 @@
     <p class="post_time">Posted on: <%= post.posted_on %></p>
     <% if post.tags.count > 0 %>
     <ul class="tags">
+      <li>Tags: </li>
       <% post.tags.each do |tag| %>
         <li><%= link_to tag.tag, tag_path(tag), :class => "tag_link" %></li>
       <% end %>
     </ul>
     <% end %>
+    </div>
   <% end %>
   <%= will_paginate @posts, :previous_label => ("Prev"), :next_label => ("Next") %>
 <% else %>
