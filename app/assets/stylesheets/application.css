@@ -22,6 +22,10 @@ body {
   min-height: 100%;
 }
 
+p {
+  font-family: sans-serif !important;
+}
+
 header h1 a {
   display: block;
   height: 92px;
@@ -99,10 +103,10 @@ body.home #home_nav li a {
 
 #content h2 {
   border-bottom: solid 2px rgba(20, 20, 20, .25);
-  color: rgba(236, 0, 140, .35);
+  color: #ec008c;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 68px;
-  letter-spacing: -10px;
+  letter-spacing: -4px;
   line-height: 46px;
   margin: 18px 0 30px;
 }
@@ -148,10 +152,14 @@ button:hover {
   cursor: pointer;
 }
 
+
+ /* Haiku */
+
 #content p.line_one,
 #content p.line_two,
 #content p.line_three {
   color: gray;
+  font-family: serif !important;
   font-size: 54px;
   line-height: 74px;
   text-align: center;
@@ -160,6 +168,104 @@ button:hover {
 .haiku {
   margin: 0 0 20px;
 }
+
+/* Blog Pages */
+
+h3.post_title {
+  margin: 0 0 20px;
+}
+
+h3.post_title a {
+  color: #00aeef;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 48px;
+  text-decoration: none;
+}
+
+body.tags h3 {
+  margin: 0 0 20px;
+}
+
+body.tags h3 a {
+  color: #00aeef;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+
+h3.post_title a:hover,
+body.tags h3 a:hover {
+  color: gray;
+}
+
+.post {
+  border-bottom: solid 6px rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  margin: 0 0 50px;
+  padding: 10px 40px 20px;
+}
+
+.post p {
+  color: gray;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 30px;
+  margin: 0 0 30px;
+}
+
+p.post_time {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.5em;
+}
+
+ul.tags {
+  color: gray;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.8em;
+  margin: 0 0 20px;
+}
+
+ul.tags li {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+ul.tags li a {
+  color: #ec008c;
+  text-decoration: none;
+}
+
+ul.tags li a:hover {
+  color: gray;
+}
+
+.pagination {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.6em;
+  font-weight: lighter;
+  text-align: center;
+  width: 100%;
+}
+
+.pagination a, .pagination .disabled, .pagination .current {
+  padding: 0 14px;
+}
+.pagination a {
+  color: gray;
+  text-decoration: none;
+}
+
+.pagination .current, .pagination a:hover {
+  color: #00aeef;
+}
+
+.pagination .disabled {
+  color: white;
+}
+
+/* Footer */
 
 footer {
   color: white;
@@ -187,7 +293,11 @@ footer a:hover {
   color: #ec008c;
 }
 
-
+h4.soon {
+  color: #00aeef;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 88px;
+}
 
 
 

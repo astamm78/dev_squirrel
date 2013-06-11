@@ -17,7 +17,7 @@ describe "Single Post Page" do
 
   it "should display the created date" do
     visit post_path(post)
-    page.should have_css('p#single_created_at')
+    page.should have_css('p.post_time')
   end
 
   it "should display tags" do
