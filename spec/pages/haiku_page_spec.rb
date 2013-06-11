@@ -9,7 +9,7 @@ describe "On Haiku Page" do
 
   it "should have the proper title on the Haiku page" do
     visit haikus_path
-    expect(page).to have_title "DevSquirrel | Haikus"
+    expect(page).to have_title "DevSquirrel | Haiku"
   end
 
 end

@@ -4,10 +4,12 @@ class Haiku < ActiveRecord::Base
 
   validates :line_1, :line_2, :line_3, :presence => true
 
-  has_many :tags, :as => :tagable
-
   def self.stale
-    Time.now - self.order("updated_at DESC").last.updated_at > 60 * 60 * 3
+    if self.count == 0
+      true
+    else
+      Time.now - self.order("updated_at ASC").last.updated_at > 60 * 60 * 3
+    end
   end
 
 end
