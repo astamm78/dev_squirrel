@@ -1,8 +1,9 @@
 DevSquirrel::Application.routes.draw do
 
-  resources :posts, :haikus, :photos, :admins
+  resources :posts, :photos, :admins
   resources :sessions, :only => [:create]
   resources :tags, :only => [:show]
+  resources :haikus, :only => [:index]
 
   namespace :dev do
     resources :links
