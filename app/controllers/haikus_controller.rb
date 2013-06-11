@@ -10,7 +10,7 @@ class HaikusController < ApplicationController
       line_3 = doc.search('.line_3').inner_text
       @haiku = Haiku.find_by_line_1(line_1)
       if @haiku
-        @haiku.update_attribues(:updated_at => Time.now)
+        @haiku.update_attributes(:updated_at => Time.now)
       else
         @haiku = Haiku.create(:line_1 => line_1, :line_2 => line_2, :line_3 => line_3)
       end
