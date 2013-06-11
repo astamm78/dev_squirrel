@@ -1,11 +1,13 @@
 <h2>Blog posts with tag: <%= @tag.tag %></h2>
 
 <% if @posts %>
+  <div class="post">
   <% @posts.each do |post| %>
     <h3><%= link_to post.title, post_path(post) %></h3>
   <% end %>
+  </div>
 <% else %>
   <h3>There are not posts with this tag</h3>
 <% end %>
 
-<h4><%= link_to "Back to Blog Posts", posts_path %></h4>
+<div class="pagination"><%= link_to "Back to Blog Posts", posts_path %></div>

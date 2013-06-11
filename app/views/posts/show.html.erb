@@ -1,9 +1,10 @@
 <% if @post %>
+  <div class="post">
   <h2 id="single_post_title"><%= @post.title %></h2>
   <% @post.body.split("\r\n").each do |p| %>
     <p><%= p %></p>
   <% end %>
-  <p id="single_created_at">Posted on: <%= @post.posted_on %></p>
+  <p class="post_time">Posted on: <%= @post.posted_on %></p>
   <% if @post.tags.count > 0 %>
     <ul id="single_post_tags">
       <% @post.tags.each do |tag| %>
@@ -11,7 +12,9 @@
       <% end %>
     </ul>
   <% end %>
+  </div>
 <% else %>
   <h2>Error</h2>
 <% end %>
-<h4><%= link_to "Back to Blog Posts", posts_path %></h4>
+
+<div class="pagination"><%= link_to "Back to Blog Posts", posts_path %></div>
