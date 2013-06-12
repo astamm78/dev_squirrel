@@ -19,6 +19,8 @@ gem 'carrierwave'
 # in production environments by default.
 group :assets do
   gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails' # if running rails 3.1 or greater
+  gem 'compass-rails'
 end
 
 group :development, :test do
