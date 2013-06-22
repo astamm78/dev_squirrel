@@ -14,6 +14,8 @@ gem 'will_paginate', '~> 3.0'
 gem "nokogiri", "~> 1.6.0"
 
 gem 'carrierwave'
+gem 'twitter'
+gem "figaro"
 
 # Gems used only for assets and not required
 # in production environments by default.
