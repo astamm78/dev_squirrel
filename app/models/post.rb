@@ -13,8 +13,8 @@ class Post < ActiveRecord::Base
     time.strftime("%B %d, %Y")
   end
 
-  def self.tweet(body, id)
-    Twitter.update("DevSquirrel: #{body}, http://www.devsquirrel.com/posts/#{id}")
+  def tweet
+    Twitter.update("DevSquirrel: #{self.body}, http://www.devsquirrel.com/posts/#{self.id}")
   end
 
 end

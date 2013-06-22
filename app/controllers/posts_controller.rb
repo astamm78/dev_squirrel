@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       post.tags << Tag.find_or_create_by_tag(:tag => tag)
     end
     if post.save
-      Post.tweet(post.title, post.id)
+      post.tweet
       redirect_to posts_path
     else
       flash[:errors] = "Please enter all fields"
