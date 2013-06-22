@@ -1,10 +1,10 @@
 <% if @post %>
   <div class="post">
   <h2 id="single_post_title"><%= @post.title %></h2>
+  <p class="post_time">Posted on: <%= @post.posted_on %></p>
   <% @post.body.split("\r\n").each do |p| %>
     <p><%= p %></p>
   <% end %>
-  <p class="post_time">Posted on: <%= @post.posted_on %></p>
   <% if @post.tags.count > 0 %>
     <ul class="tags">
       <% @post.tags.each do |tag| %>
