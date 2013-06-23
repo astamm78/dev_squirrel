@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
 
   has_and_belongs_to_many :tags
 
-  before_save :clean_html
+  before_save :clean_html, :line_breaks
 
   self.per_page = 4
 
@@ -22,6 +22,10 @@ class Post < ActiveRecord::Base
   private
   def clean_html
     self.body = Sanitize.clean(body, Sanitize::Config::BASIC)
+  end
+
+  def line_breaks
+    self.body = self.body.gsub("\n", "</p><p>")
   end
 
 end
