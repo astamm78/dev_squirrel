@@ -8,6 +8,7 @@
     <% post.body.split("\n").each do |p| %>
       <p><%= p.html_safe unless p == "" %></p>
     <% end %>
+      <p><%= link_to "Edit", edit_post_path(post.id) if current_user %></p>
     <% if post.tags.count > 0 %>
     <ul class="tags">
       <li>Tags: </li>
