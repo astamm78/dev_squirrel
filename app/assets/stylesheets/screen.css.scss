@@ -174,11 +174,12 @@ button {
 /* Blog Pages */
 
 h3.post_title {
+  color: #00aeef;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 48px;
   margin: 0 0 20px;
   a {
-    color: #00aeef;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 48px;
+    color: $blue;
     text-decoration: none;
   }
 }

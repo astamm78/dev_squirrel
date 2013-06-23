@@ -4,10 +4,10 @@
   <% @posts.each do |post| %>
     <div class="post">
     <h3 class="post_title"><%= link_to post.title, post_path(post), :class => "post_link" %></h3>
+    <p class="post_time">Posted on: <%= post.posted_on %></p>
     <% post.body.split("\r\n").each do |p| %>
       <p><%= p %></p>
     <% end %>
-    <p class="post_time">Posted on: <%= post.posted_on %></p>
     <% if post.tags.count > 0 %>
     <ul class="tags">
       <li>Tags: </li>
