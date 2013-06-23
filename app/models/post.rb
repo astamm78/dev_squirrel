@@ -6,6 +6,8 @@ class Post < ActiveRecord::Base
 
   has_and_belongs_to_many :tags
 
+  before_save :clean_html
+
   self.per_page = 4
 
   def posted_on
@@ -15,6 +17,11 @@ class Post < ActiveRecord::Base
 
   def tweet
     Twitter.update("DevSquirrel: #{self.body}, http://www.devsquirrel.com/posts/#{self.id}")
+  end
+
+  private
+  def clean_html
+    self.body = Sanitize.clean(body, Sanitize::Config::BASIC)
   end
 
 end
