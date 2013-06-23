@@ -16,7 +16,8 @@ gem "nokogiri", "~> 1.6.0"
 
 gem 'carrierwave'
 gem 'twitter'
-gem "figaro"
+gem 'figaro'
+gem 'sanitize'
 
 # Gems used only for assets and not required
 # in production environments by default.
