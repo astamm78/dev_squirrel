@@ -28,4 +28,23 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    @body_class = 'posts'
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.tags.destroy_all
+    params[:post][:tags].split(", ").each do |tag|
+      @post.tags << Tag.find_or_create_by_tag(:tag => tag)
+    end
+    params[:post].delete :tags
+    if @post.update_attributes(params[:post])
+      redirect_to post_path(@post.id)
+    else
+      flash[:errors] = "Changes not saved. Please try again."
+    end
+  end
+
 end
