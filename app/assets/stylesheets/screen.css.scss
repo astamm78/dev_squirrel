@@ -1,10 +1,11 @@
 @import "compass/reset";
 
+$blue : #00aeef;
 $magenta:  #ec008c;
 $yellow: #fff000;
 
 html {
-  background: #00aeef url('/assets/background.jpg') top repeat-x;
+  background: $blue url('/assets/background.jpg') top repeat-x;
   height: 100%;
 }
 
@@ -20,6 +21,14 @@ p {
   font-weight: lighter;
   line-height: 30px;
   margin: 0 0 30px;
+  a {
+    color: $magenta;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      color: $blue;
+    }
+  }
 }
 
 header {
@@ -159,7 +168,7 @@ button {
 }
 
 .haiku {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
 }
 
 /* Blog Pages */
