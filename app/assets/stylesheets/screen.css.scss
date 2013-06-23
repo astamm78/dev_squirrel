@@ -268,12 +268,13 @@ footer {
   text-align: center;
   width: 900px;
   p {
+    color: white;
     font-family: sans-serif;
   }
   a {
-    color: white;
+    color: $yellow;
     &:hover {
-      color: #ec008c;
+      color: $magenta;
     }
   }
 }
