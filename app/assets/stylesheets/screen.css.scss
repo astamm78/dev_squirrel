@@ -1,12 +1,12 @@
 @import "compass/reset";
 
-$blue: #00aeef;
-$dark_blue: darken($blue, 30%);
+$cyan: #00aeef;
+$dark_blue: darken($cyan, 30%);
 $magenta:  #ec008c;
 $yellow: #fff000;
 
 html {
-  background: $blue url('/assets/background.jpg') top repeat-x;
+  background: $cyan url('/assets/background.jpg') top repeat-x;
   height: 100%;
 }
 
@@ -27,7 +27,7 @@ p {
     font-weight: bold;
     text-decoration: none;
     &:hover {
-      color: $blue;
+      color: $cyan;
     }
   }
 }
@@ -53,6 +53,11 @@ header {
   margin: 0 auto;
   position: relative;
   width: 900px;
+}
+
+.spacer {
+  clear: both;
+  height: 40px;
 }
 
 #home_nav {
@@ -95,6 +100,26 @@ body.home #home_nav {
       font-size: 72px;
       line-height: .8em;
       padding: 0 60px 0 0;
+    }
+  }
+}
+
+/* About Page Links */
+
+body.about {
+  ul {
+    li {
+      display: inline-block;
+      a {
+        color: $magenta;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 22px;
+        margin: 0 18px 0 0;
+        text-decoration: none;
+        &:hover {
+          color: $cyan;
+        }
+      }
     }
   }
 }
@@ -178,13 +203,13 @@ button {
 
 /* Blog Pages */
 
-h3.post_title {
+h3, h3.post_title {
   color: #00aeef;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 48px;
   margin: 0 0 20px;
   a {
-    color: $blue;
+    color: $cyan;
     text-decoration: none;
   }
 }
