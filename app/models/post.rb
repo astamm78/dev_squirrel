@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
   end
 
   def tweet
-    Twitter.update("DevSquirrel: #{self.body}, http://www.devsquirrel.com/posts/#{self.id}")
+    Twitter.update("DevSquirrel: #{self.title}, http://www.devsquirrel.com/posts/#{self.id}")
   end
 
   private
