@@ -3,6 +3,7 @@ class PhotosController < ApplicationController
   def index
     @title = "Photos"
     @body_class = "photo"
+    @photo = Photo.first
   end
 
   def create
