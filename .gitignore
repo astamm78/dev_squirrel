@@ -17,4 +17,5 @@
 # Ignore application configuration
 /config/application.yml
 
-/public/system/photos/images/
+# Ignore Test Image Files
+/public/system/photos/images
