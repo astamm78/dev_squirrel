@@ -14,10 +14,13 @@ gem 'will_paginate', '~> 3.0'
 
 gem "nokogiri", "~> 1.6.0"
 
-gem 'carrierwave'
 gem 'twitter'
 gem 'figaro'
 gem 'sanitize'
+
+# Image Uploading and Storage
+gem 'paperclip'
+gem 'aws-sdk'
 
 # Gems used only for assets and not required
 # in production environments by default.
