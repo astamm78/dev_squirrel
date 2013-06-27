@@ -7,8 +7,9 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @body_class = "photo"
     @photo = Photo.find(params[:id])
-    render :template => 'photos/show', :layout => false
+    render :layout => false
   end
 
   def create

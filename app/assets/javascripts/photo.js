@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   $('.container').on('click', '.image_close', function(event) {
     event.preventDefault();
-    $('.full_size').toggle();
+    $('.full_size').toggle().html('');
   });
 
   $('.container').on('click', 'a.photo_nav', function(event){
