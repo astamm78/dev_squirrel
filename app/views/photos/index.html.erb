@@ -1,13 +1,9 @@
 <h2>My Photography</h2>
 
-<div class="post">
-
-  <% if @photos %>
-    <% @photos.each do |photo| %>
-      <%= link_to (image_tag photo.image(:square)), photo.image(:original) %>
-    <% end %>
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <%= link_to (image_tag photo.image(:square)), photo.image(:original), :class => 'photo_thumb' %>
   <% end %>
+<% end %>
 
-  <div class="spacer"></div>
-
-</div>
+<div class="spacer"></div>

@@ -297,6 +297,20 @@ ul.tags {
   color: white;
 }
 
+/* Photo Page */
+
+body.photo {
+  a {
+    img {
+      border: solid 2px white;
+      margin: 0 1px;
+      &:hover {
+        border: solid 2px $magenta;
+      }
+    }
+  }
+}
+
 /* Footer */
 
 footer {
