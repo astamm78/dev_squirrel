@@ -21,4 +21,9 @@ class PhotosController < ApplicationController
     end
   end
 
+  def destroy
+    Photo.delete(params[:id])
+    redirect_to :back
+  end
+
 end
