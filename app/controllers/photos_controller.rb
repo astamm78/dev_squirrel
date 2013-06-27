@@ -7,7 +7,6 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @body_class = "photo"
     @photo = Photo.find(params[:id])
     render :layout => false
   end
