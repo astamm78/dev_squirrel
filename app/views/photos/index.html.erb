@@ -2,12 +2,10 @@
 
 <div class="post">
 
-  <p>This page is a work in progress. I have implemented Paperclip for file upload, along with AWS S3 for image storage. I'm also excited to use JavaScript to create an image gallery on this page using some of my favorite photograhs.</p>
-
-  <p>Photography has long been a passion of mine, while this page is in progress please take a look at <%= link_to "AndrewStamm.com", "http://www.andrewstamm.com", :target => '_blank' %> to view my work in this area.</p>
-
-  <% if @photo %>
-    <%= link_to (image_tag(@photo.image.url, width: '756')), 'http://www.andrewstamm.com', :target => '_blank' %>
+  <% if @photos %>
+    <% @photos.each do |photo| %>
+      <%= link_to (image_tag photo.image(:square)), photo.image(:original) %>
+    <% end %>
   <% end %>
 
   <div class="spacer"></div>
