@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    @title = "Welcome"
+    @title = "About DevSquirrel"
+    @body_class = "about"
   end
 
 end
