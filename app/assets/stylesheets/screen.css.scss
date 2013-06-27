@@ -238,6 +238,10 @@ body.tags h3 {
   }
 }
 
+#content ul.tags {
+  border: none;
+}
+
 h3.post_title a:hover,
 body.tags h3 a:hover {
   color: gray;
