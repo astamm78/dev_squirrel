@@ -7,11 +7,6 @@ describe "Navigation Links" do
     page.should have_css('ul#home_nav')
   end
 
-  it "should appear on about page" do
-    visit about_path
-    page.should have_css('ul#home_nav')
-  end
-
   it "should appear on blog page" do
     visit posts_path
     page.should have_css('ul#home_nav')

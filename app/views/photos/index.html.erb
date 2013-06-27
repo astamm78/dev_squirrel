@@ -6,6 +6,10 @@
 
   <p>Photography has long been a passion of mine, while this page is in progress please take a look at <%= link_to "AndrewStamm.com", "http://www.andrewstamm.com", :target => '_blank' %> to view my work in this area.</p>
 
-  <%= link_to (image_tag(@photo.image.url, width: '756')), 'http://www.andrewstamm.com', :target => '_blank' %>
+  <% if @photo %>
+    <%= link_to (image_tag(@photo.image.url, width: '756')), 'http://www.andrewstamm.com', :target => '_blank' %>
+  <% end %>
+
+  <div class="spacer"></div>
 
 </div>
