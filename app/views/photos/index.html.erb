@@ -3,11 +3,13 @@
 <% if @photos %>
   <div class="gallery">
     <% @photos.each do |photo| %>
-      <%= link_to (image_tag photo.image(:square)), photo.image(:original), :class => 'photo_thumb' %>
+      <%= link_to (image_tag photo.image(:square)), photo.image(:original), :class => 'photo_thumb', :id => photo.id %>
     <% end %>
   </div>
 <% end %>
 
 <p>I built this gallery of some of my favorite photographs using Paperclip for file upload, along with AWS S3 for image storage. I also had fun writing the JavaScript to create an image gallery on this page from scratch. Photography has long been a passion of mine. Please take a look at <%= link_to 'AndrewStamm.com', 'http://www.andrewstamm.com', :target => '_blank' %> to view more of my work in this area.</p>
+
+<div class="full_size"></div>
 
 <div class="spacer"></div>

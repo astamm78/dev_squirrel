@@ -6,6 +6,11 @@ class PhotosController < ApplicationController
     @photos = Photo.all
   end
 
+  def show
+    @photo = Photo.find(params[:id])
+    render :template => 'photos/show', :layout => false
+  end
+
   def create
     photo = Photo.create(params[:photo]);
     if photo.save

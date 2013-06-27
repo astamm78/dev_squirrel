@@ -1,0 +1,6 @@
+<a class="image_close" href="#">close</a>
+<%= image_tag @photo.image(:original), :size => '920x616' %>
+<ul class="popup_nav">
+  <li><%= link_to 'Previous', "/photos/#{@photo.previous.id}", :class => 'photo_nav' if @photo.previous %></li>
+  <li><%= link_to 'Next', "/photos/#{@photo.next.id}", :class => 'photo_nav' if @photo.next %></li>
+</ul>

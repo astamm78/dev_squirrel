@@ -13,4 +13,12 @@ class Photo < ActiveRecord::Base
     large:    '600x600>'
   }
 
+  def previous
+    Photo.where("id < ?", self.id).reverse.first
+  end
+
+  def next
+    Photo.where("id > ?", self.id).first
+  end
+
 end

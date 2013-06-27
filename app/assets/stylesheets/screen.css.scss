@@ -338,6 +338,22 @@ body.photo {
   margin: 0 0 20px;
 }
 
+#content {
+  ul.popup_nav {
+    border-bottom: none;
+    li {
+      display: inline-block;
+      list-style: none;
+      a {
+        color: $magenta;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        margin: 0 8px 0 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 /* Footer */
 
 footer {
