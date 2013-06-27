@@ -2,7 +2,9 @@
   <h3 class="post_title"><%= link_to post.title, post_path(post), :class => "post_link" %></h3>
   <p class="post_time">Posted on: <%= post.posted_on %></p>
   <p><%= post.body.html_safe %></p>
-    <p><%= link_to "Edit", edit_post_path(post.id) if current_user %> | <%= link_to "Delete", post_path(post.id), :method => :delete if current_user %></p>
+    <% if current_user %>
+      <p><%= link_to "Edit", edit_post_path(post.id) %> | <%= link_to "Delete", post_path(post.id), :method => :delete %></p>
+    <% end %>
   <% if post.tags.count > 0 %>
   <ul class="tags">
     <li>Tags: </li>
