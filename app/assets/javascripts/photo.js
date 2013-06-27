@@ -14,5 +14,5 @@ $(document).ready(function() {
 });
 
 var imageBox = function(imageURL) {
- return '<div class="full_size"><a class="image_close" href="#">close</a><img src=' + imageURL + ' width="860" /></div>'
+ return '<div class="full_size"><a class="image_close" href="#">close</a><img src=' + imageURL + ' width="920" /></div>'
 }
