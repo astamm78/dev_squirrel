@@ -303,11 +303,28 @@ body.photo {
   a {
     img {
       border: solid 2px white;
-      margin: 0 1px;
+      margin: 2px 1px;
       &:hover {
         border: solid 2px $magenta;
       }
     }
+  }
+}
+
+.full_size {
+  background: rgba(255,255,255,.85);
+  border-radius: 8px;
+  box-shadow: 0 0 25px $dark_blue;
+  padding: 20px;
+  position: absolute;
+    top: 100px;
+  width: 860px;
+  a.image_close {
+    color: $magenta;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    position: relative;
+      bottom: 8px;
+    text-decoration: none;
   }
 }
 

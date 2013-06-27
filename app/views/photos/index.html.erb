@@ -1,5 +1,9 @@
 <h2>My Photography</h2>
 
+<p>I built this gallery of some of my favorite photographs using Paperclip for file upload, along with AWS S3 for image storage. I'm also excited to written the JavaScript to create an image gallery on this page.</p>
+
+<p>Photography has long been a passion of mine, while this page is in progress please take a look at <%= link_to 'AndrewStamm.com', 'http://www.andrewstamm.com', :target => '_blank' %> to view more of my work in this area.</p>
+
 <% if @photos %>
   <% @photos.each do |photo| %>
     <%= link_to (image_tag photo.image(:square)), photo.image(:original), :class => 'photo_thumb' %>
