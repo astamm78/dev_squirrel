@@ -11,8 +11,6 @@ DevSquirrel::Application.routes.draw do
 
   root :to => 'home#index'
 
-  get "/about" => 'about#index', :as => 'about'
-
   get "/dev" => 'dev#index', :as => 'dev'
 
   get "/narwhal" => "sessions#index"
