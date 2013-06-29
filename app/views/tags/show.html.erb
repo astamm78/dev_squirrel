@@ -3,7 +3,7 @@
 <% if @posts %>
   <div class="post">
   <% @posts.each do |post| %>
-    <h3><%= link_to post.title, post_path(post) %></h3>
+    <h3><%= link_to post.title, post_path(post), :class => 'post_link' %></h3>
   <% end %>
   </div>
 <% else %>
