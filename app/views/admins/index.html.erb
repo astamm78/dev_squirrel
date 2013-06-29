@@ -1,16 +1,17 @@
 <h2><%= current_user.full_name %> Admin Page</h2>
 
 <ul id="new_content">
-  <li><a class="new_post" href="#">New Post</a></li>
-  <li><a class="new_photo" href="#">New Photo</a></li>
+  <li><a class="new_post" data=".admin_post_form" href="#">New Post</a></li>
+  <li><a class="new_photo" data=".admin_photo_form" href="#">New Photo</a></li>
 </ul>
 
 <% if flash[:errors] %>
   <p class="errors"><%= flash[:errors] %></p>
 <% end %>
 
-<div class="admin_post_form">
+<div class="admin_post_form entry" >
   <h3>New Post</h3>
+  <h4><a class="admin_close" href="#">Close</a></h4>
   <%= form_for @post do |p| %>
     <%= p.label :title, "Title" %>
     <%= p.text_field :title, :placeholder => "Post Title" %>
@@ -22,8 +23,9 @@
   <% end %>
 </div>
 
-<div class="admin_photo_form">
+<div class="admin_photo_form entry">
   <h3>New Photo</h3>
+  <h4><a class="admin_close" href="#">Close</a></h4>
   <%= form_for @photo do |f| %>
     <%= f.label :title, 'Title' %>
     <%= f.text_field :title, :placeholder => 'Photo Title' %>
