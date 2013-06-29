@@ -2,7 +2,6 @@
 
 <ul id="new_content">
   <li><a class="new_post" href="#">New Post</a></li>
-  <li><a class="new_dev" href="#">New Dev Link</a></li>
   <li><a class="new_photo" href="#">New Photo</a></li>
 </ul>
 
@@ -10,22 +9,28 @@
   <p class="errors"><%= flash[:errors] %></p>
 <% end %>
 
-<%= form_for @post do |p| %>
-  <%= p.label :title, "Title" %>
-  <%= p.text_field :title, :placeholder => "Post Title" %>
-  <%= p.label :body, "Body" %>
-  <%= p.text_area :body, :placeholder => "Post Body" %>
-  <%= p.label :tags, "Tags" %>
-  <%= p.text_field :tags, :value => nil, :placeholder => "Tags" %>
-  <%= p.button "New Post" %>
-<% end %>
+<div class="admin_post_form">
+  <h3>New Post</h3>
+  <%= form_for @post do |p| %>
+    <%= p.label :title, "Title" %>
+    <%= p.text_field :title, :placeholder => "Post Title" %>
+    <%= p.label :body, "Body" %>
+    <%= p.text_area :body, :placeholder => "Post Body" %>
+    <%= p.label :tags, "Tags" %>
+    <%= p.text_field :tags, :value => nil, :placeholder => "Tags" %>
+    <%= p.button "New Post" %>
+  <% end %>
+</div>
 
-<%= form_for @photo do |f| %>
-  <%= f.label :title, 'Title' %>
-  <%= f.text_field :title, :placeholder => 'Photo Title' %>
-  <%= f.label :description, 'Description' %>
-  <%= f.text_area :description, :placeholder => 'Photo Description' %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.button "Add Image" %>
-<% end %>
+<div class="admin_photo_form">
+  <h3>New Photo</h3>
+  <%= form_for @photo do |f| %>
+    <%= f.label :title, 'Title' %>
+    <%= f.text_field :title, :placeholder => 'Photo Title' %>
+    <%= f.label :description, 'Description' %>
+    <%= f.text_area :description, :placeholder => 'Photo Description' %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.button "Add Image" %>
+  <% end %>
+</div>

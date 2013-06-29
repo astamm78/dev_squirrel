@@ -167,8 +167,9 @@ body.about {
   padding: 30px;
 }
 
-input, textarea {
+input[type=text], textarea {
     border: 5px solid white;
+    font-size: 22px;
     -webkit-box-shadow:
       inset 0 0 8px  rgba(0,0,0,0.1),
             0 0 16px rgba(0,0,0,0.1);
@@ -185,6 +186,10 @@ input, textarea {
     width: 786px;
 }
 
+textarea {
+  height: 300px;
+}
+
 button {
   background: #ec008c;
   border: none;
@@ -195,6 +200,32 @@ button {
   &:hover {
     background: #00aeef;
     cursor: pointer;
+  }
+}
+
+input#photo_image {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 18px;
+  width: 100%;
+}
+
+/* Admin */
+
+#content #new_content {
+  border-bottom: none;
+  li {
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    margin: 0 20px 0 0;
+    a {
+      color: $cyan;
+      text-decoration: none;
+      &:hover {
+        color: gray;
+      }
+    }
   }
 }
 
