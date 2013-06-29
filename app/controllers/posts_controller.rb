@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @body_class = 'posts'
+    @body_class = 'posts single_post'
     @title = @post.title
   end
 
