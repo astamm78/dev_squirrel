@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('.full_size').toggle();
 
-  $('a.photo_thumb').click(function(event) {
+  $('.container').on('click', 'a.photo_thumb', function(event) {
     event.preventDefault();
     imageID = $(this).attr('id');
     $.get('/photos/' + imageID, function(results){
