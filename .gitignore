@@ -19,3 +19,5 @@
 
 # Ignore Test Image Files
 /public/system/photos/images
+
+.DS_Store
