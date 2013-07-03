@@ -19,6 +19,8 @@
     <%= p.text_area :body, :placeholder => "Post Body" %>
     <%= p.label :tags, "Tags" %>
     <%= p.text_field :tags, :value => nil, :placeholder => "Tags" %>
+    <%= check_box_tag(:tweet, '1', false, :class=> "regular-checkbox") %>
+    <%= label_tag(:tweet, "Tweet this post?") %>
     <%= p.button "New Post" %>
   <% end %>
 </div>
