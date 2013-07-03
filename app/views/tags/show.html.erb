@@ -1,11 +1,19 @@
 <h2>Blog posts with tag: <%= @tag.tag %></h2>
 
 <% if @posts %>
-  <div class="post">
   <% @posts.each do |post| %>
+  <div class="post">
     <h3><%= link_to post.title, post_path(post), :class => 'post_link' %></h3>
-  <% end %>
+    <p class="post_time">Posted on: <%= post.posted_on %></p>
+    <p><strong>Excerpt: </strong><%= smart_truncate(post.body, words: 30).html_safe %></p>
+    <ul class="tags">
+      <li>Tags: </li>
+      <% post.tags.each do |tag| %>
+        <li><%= link_to tag.tag, tag_path(tag), :class => "tag_link" %></li>
+      <% end %>
+    </ul>
   </div>
+  <% end %>
 <% else %>
   <h3>There are not posts with this tag</h3>
 <% end %>
