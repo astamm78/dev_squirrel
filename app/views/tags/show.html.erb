@@ -1,7 +1,7 @@
 <h2>Posts by Tag</h2>
 
 <% if @posts %>
-  <h3><%= @posts.count %> Results with tag: '<%= @tag.tag %>'</h3>
+  <h3><%= pluralize(@posts.count, 'Result') %> with tag: '<%= @tag.tag %>'</h3>
   <% @posts.each do |post| %>
   <div class="post">
     <h3><%= link_to post.title, post_path(post), :class => 'post_link' %></h3>
