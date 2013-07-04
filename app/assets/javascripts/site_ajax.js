@@ -9,6 +9,7 @@ $(document).ready(function() {
     $('body').removeClass();
     $('.container').load(url + ' .container');
     $('body').addClass(bodyClass);
+    $('html, body').animate({ scrollTop: 0 }, 0);
   });
 
   // For Browser 'Back' Button
