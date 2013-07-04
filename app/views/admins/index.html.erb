@@ -29,10 +29,6 @@
   <h3>New Photo</h3>
   <h4><a class="admin_close" href="#">Close</a></h4>
   <%= form_for @photo do |f| %>
-    <%= f.label :title, 'Title' %>
-    <%= f.text_field :title, :placeholder => 'Photo Title' %>
-    <%= f.label :description, 'Description' %>
-    <%= f.text_area :description, :placeholder => 'Photo Description' %>
     <%= f.label :image %>
     <%= f.file_field :image %>
     <%= f.button "Add Image" %>

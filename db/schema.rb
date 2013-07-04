@@ -46,6 +46,10 @@ ActiveRecord::Schema.define(:version => 20130626202718) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.datetime "taken_at"
+    t.string   "camera"
+    t.string   "aperture"
+    t.string   "exposure"
   end
 
   create_table "posts", :force => true do |t|

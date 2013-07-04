@@ -21,6 +21,7 @@ gem 'sanitize'
 # Image Uploading and Storage
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'exifr'
 
 # Gems used only for assets and not required
 # in production environments by default.
