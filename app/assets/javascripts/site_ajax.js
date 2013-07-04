@@ -3,6 +3,7 @@ $(document).ready(function() {
   // Nav Link AJAX
   $('.container').on('click', 'a.jlink, .pagination a', function(event) {
     event.preventDefault();
+    $('.styled_box').html('<img style="width:550px;height:400px;padding:0 140px;margin-top:-60px;" src="/assets/loadingAnimation.gif"/>')
     if ($(this).attr('data') === undefined) {
       var bodyClass = "posts";
     }
