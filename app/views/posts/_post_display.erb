@@ -1,5 +1,5 @@
 <div class="post">
-  <h3 class="post_title"><%= link_to post.title, post_path(post), :class => "post_link jlink" %></h3>
+  <h3 class="post_title"><%= link_to post.title, post_path(post), :class => "post_link jlink", :data => "posts" %></h3>
   <p class="post_time">Posted on: <%= post.posted_on %></p>
   <p><%= post.body.html_safe %></p>
     <% if current_user %>
@@ -9,7 +9,7 @@
   <ul class="tags">
     <li>Tags: </li>
     <% post.tags.each do |tag| %>
-      <li><%= link_to tag.tag, tag_path(tag), :class => "tag_link jlink" %></li>
+      <li><%= link_to tag.tag, tag_path(tag), :class => "tag_link jlink", :data => "posts" %></li>
     <% end %>
   </ul>
   <% end %>
