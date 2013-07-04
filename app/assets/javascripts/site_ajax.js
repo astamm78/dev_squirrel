@@ -3,7 +3,7 @@ $(document).ready(function() {
   // Nav Link AJAX
   $('.container').on('click', 'a.jlink, .pagination a', function(event) {
     event.preventDefault();
-    var bodyClass = $(this).text();
+    var bodyClass = $(this).attr('data');
     var url = $(this).attr('href');
     history.pushState({ url: url, bodyClass: bodyClass }, '', url);
     $('body').removeClass();
