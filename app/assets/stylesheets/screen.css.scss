@@ -428,6 +428,7 @@ body.photo {
 #content {
   ul.popup_nav {
     border-bottom: none;
+    margin: 0px;
     li {
       display: inline-block;
       list-style: none;
@@ -439,6 +440,12 @@ body.photo {
       }
     }
   }
+}
+
+p.exif {
+  font-size: .9em;
+  margin: 0px;
+  text-indent: 8px;
 }
 
 /* Footer */
