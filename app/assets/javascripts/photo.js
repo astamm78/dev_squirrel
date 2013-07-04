@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   $('.container').on('click', 'a.photo_thumb', function(event) {
     event.preventDefault();
-    var url = "/photos/" + $(this).attr('id');
+    var url = $(this).attr('href');
     $('.full_size').load(url).removeClass('hidden');
   });
 
