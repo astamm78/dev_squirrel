@@ -3,8 +3,6 @@ class Photo < ActiveRecord::Base
   attr_accessible :title, :description, :image, :image_file_name,
                   :camera, :taken_at, :exposure, :aperture
 
-  has_many :tags, :as => :tagable
-
   validates :image, :presence => true
 
   has_attached_file :image, styles: {
@@ -25,7 +23,6 @@ class Photo < ActiveRecord::Base
   private
   def copy_exif_data
     exif =EXIFR::JPEG.new(self.image.queued_for_write[:original].path)
-    p exif
     self.camera     = exif.model
     self.taken_at   = exif.date_time_original
     self.exposure   = exif.exposure_time.to_s
