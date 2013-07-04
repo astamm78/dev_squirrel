@@ -1,6 +1,11 @@
 <a class="image_close" href="#">close</a>
-<%= image_tag @photo.image(:original), :size => '920x616' %>
+<%= image_tag @photo.image(:large), :size => '920x616' %>
 <ul class="popup_nav">
+  <p class="exif">
+    Taken on <%= @photo.taken_at.strftime("%B %d, %Y") %>
+    with a <%= @photo.camera %> •
+    <%= @photo.exposure %> sec. • f <%= @photo.aperture %> • <%= @photo.focal %> mm.
+  </p>
   <li><%= link_to 'Previous', "/photos/#{@photo.previous.id}", :class => 'photo_nav' if @photo.previous %></li>
   <li><%= link_to 'Next', "/photos/#{@photo.next.id}", :class => 'photo_nav' if @photo.next %></li>
   <li><%= link_to 'Delete', photo_path(@photo.id), :method => :delete if current_user %></li>
