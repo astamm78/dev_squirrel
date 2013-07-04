@@ -14,11 +14,6 @@ describe "On Haiku Page" do
     page.should have_css('body.haiku')
   end
 
-  it "should have the proper title on the Haiku page" do
-    visit haikus_path
-    expect(page).to have_title "DevSquirrel | Haiku"
-  end
-
   it "should display line one of the haiku" do
     visit haikus_path
     page.should have_content(@haiku.line_1)

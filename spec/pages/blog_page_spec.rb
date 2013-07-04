@@ -59,9 +59,4 @@ describe "On Blog Page" do
     page.should have_css('body.blog')
   end
 
-  it "should have the proper title on the Blog page" do
-    visit posts_path
-    expect(page).to have_title "DevSquirrel | DevSquirrel Blog"
-  end
-
 end

@@ -12,7 +12,7 @@ describe "On Tags Pages" do
     post.tags.create(:tag => "RSPEC")
     visit posts_path
     click_link 'RSPEC'
-    page.should have_content('Blog posts with tag:')
+    page.should have_content("1 Result with tag: 'RSPEC'")
   end
 
   it "should display blog posts with its tag" do
@@ -37,14 +37,6 @@ describe "On Tags Pages" do
     post.tags << tag
     visit tag_path(tag)
     page.should have_css('body.tags')
-  end
-
-  it "should have the proper title on the Tag page" do
-    post = Post.create(:title => "Tag Test", :body => "Tag Test Body")
-    tag = Tag.create(:tag => "RSPEC")
-    post.tags << tag
-    visit tag_path(tag)
-    expect(page).to have_title "DevSquirrel | RSPEC"
   end
 
 end

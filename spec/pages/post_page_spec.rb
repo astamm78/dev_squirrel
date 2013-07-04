@@ -37,9 +37,4 @@ describe "Single Post Page" do
     page.should have_css('body.posts')
   end
 
-  it "should have the proper title on the Post page" do
-    visit post_path(post)
-    expect(page).to have_title "DevSquirrel | Title"
-  end
-
 end
