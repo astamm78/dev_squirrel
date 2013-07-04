@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // Nav Link AJAX
-  $('.container').on('click', 'a.jlink', function(event) {
+  $('.container').on('click', 'a.jlink, .pagination a', function(event) {
     event.preventDefault();
     var bodyClass = $(this).text();
     var url = $(this).attr('href');
