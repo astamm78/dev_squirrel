@@ -5,12 +5,12 @@ $(document).ready(function() {
   $('.container').on('click', 'a.photo_thumb', function(event) {
     event.preventDefault();
     var url = "/photos/" + $(this).attr('id');
-    $('.full_size').load(url).toggle();
+    $('.full_size').load(url).removeClass('hidden');
   });
 
   $('.container').on('click', '.image_close', function(event) {
     event.preventDefault();
-    $('.full_size').toggle().html('');
+    $('.full_size').addClass('hidden').html('');
   });
 
   $('.container').on('click', 'a.photo_nav', function(event){
