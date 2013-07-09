@@ -84,6 +84,7 @@ GEM
     mini_portile (0.5.0)
     multi_json (1.7.6)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.5.130)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     paperclip (3.4.2)
@@ -177,6 +178,7 @@ DEPENDENCIES
   faker
   figaro
   jquery-rails
+  newrelic_rpm
   nokogiri (~> 1.6.0)
   paperclip
   pg

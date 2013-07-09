@@ -18,6 +18,8 @@ gem 'twitter'
 gem 'figaro'
 gem 'sanitize'
 
+gem 'newrelic_rpm'
+
 # Image Uploading and Storage
 gem 'paperclip'
 gem 'aws-sdk'
