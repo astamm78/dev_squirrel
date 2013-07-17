@@ -8,7 +8,7 @@ class Haiku < ActiveRecord::Base
     if self.count == 0
       true
     else
-      Time.now - self.order("updated_at ASC").last.updated_at > 60 * 60 * 3#hours
+      Time.now - self.order("updated_at ASC").last.updated_at > 1#60 * 60 * 3#hours
     end
   end
 
