@@ -1,0 +1,25 @@
+<div id="sidebar">
+  <div class="widget">
+    <% if recent_posts %>
+      <h2>Recent Posts:</h2>
+      <ul>
+      <% recent_posts.each do |post| %>
+        <li><%= link_to post.title, post_path(post.id) %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="widget">
+    <% if recent_tweets %>
+      <h2>Recent Tweets:</h2>
+      <ul>
+      <% recent_tweets.each do |tweet| %>
+        <li><%= link_to tweet.text, 'http://twitter.com/astamm78', :target => '_blank' %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>
+
+<div class="clear"></div>

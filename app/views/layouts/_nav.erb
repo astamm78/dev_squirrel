@@ -1,0 +1,18 @@
+<div id="nav">
+  <ul id="home_nav">
+    <li><%= link_to "about",  root_path,    :class => "about_link jlink",   :data => "about" %></li>
+    <li><%= link_to "dev",    dev_path,     :class => "dev_link jlink",     :data => "dev" %></li>
+    <li><%= link_to "blog",   posts_path,   :class => "blog_link jlink",    :data => "posts" %></li>
+    <li><%= link_to "photo",  photos_path,  :class => "photo_link jlink",   :data => "photo" %></li>
+    <li><%= link_to "haiku",  haikus_path,  :class => "haiku_link jlink",   :data => "haiku" %></li>
+  </ul>
+
+  <ul id="web_links">
+    <li><a href="https://twitter.com/astamm78" target="_blank">Twitter</a></li>
+    <li><a href="https://github.com/astamm78" target="_blank">GitHub</a></li>
+    <li><a href="http://www.linkedin.com/pub/andrew-stamm/35/777/170" target="_blank">LinkedIn</a></li>
+    <li><%= link_to 'Resume', '/assets/Resume-2013.pdf', :target => "_blank" %></li>
+  </ul>
+</div>
+
+<div class="clear"></div>
