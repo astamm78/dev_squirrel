@@ -61,6 +61,12 @@ header {
           .yeller {
             color: $yellow;
           }
+          &:hover {
+            color: $yellow;
+            .yeller {
+              color: $dark_blue;
+            }
+          }
         }
       }
     }
@@ -199,6 +205,21 @@ body.haiku #home_nav li a.haiku_link {
     text-decoration: none;
     &:hover {
       color: $magenta;
+    }
+  }
+}
+
+footer {
+  color: $dark-gray;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 4%;
+  text-align: center;
+  width: 100%;
+  a {
+    color: $dark_blue;
+    &:hover {
+      color: $dark-gray;
     }
   }
 }
