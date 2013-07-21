@@ -1,10 +1,12 @@
 <h2>DevSquirrel Haikus</h2>
 
-<div class="haiku">
+<div class="haiku_post">
   <p class="line_one"><%= @haiku.line_1 %></p>
   <p class="line_two"><%= @haiku.line_2 %></p>
   <p class="line_three"><%= @haiku.line_3 %></p>
 </div>
 
 <p>A random haiku, taken from an earlier web app that I built with the Sinatra framework.</p>
+<p>New haikus posted every Wednesday!</p>
+<p>I built the website with Sinatra to reinforce the concepts of GET and POST http requests. Over time this project grew to use additional Models and I worked with ActiveRecord join tables and many-to-many relationships. There was heavy use of JQuery AJAX. The site also helped me reinforce using sessions for account sign-in and creation.</p>
 <p>Take a look here at <%= link_to "Andrew's Haikus", 'http://www.andrewshaikus.com/', :target => '_blank' %>.</p>

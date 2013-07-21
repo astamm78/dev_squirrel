@@ -331,30 +331,26 @@ a.admin_close {
 
 /* Haiku */
 
-body.haiku #sidebar {
-  display: none;
-}
-
 #content p.line_one,
 #content p.line_two,
 #content p.line_three {
   color: gray;
   font-family: serif !important;
   font-size: 3em;
+  font-weight: lighter;
   line-height: 74px;
   margin: 0px;
   text-align: left;
 }
 
-.haiku {
-  margin: 0 0 40px;
+.haiku_post {
+  margin: 20px 0;
 }
 
 /* Blog Pages */
 
 h3, h3.post_title {
   color: $dark-gray;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.4em;
   margin: 0 0 20px;
   a {
@@ -376,7 +372,6 @@ body.tags h3 {
   margin: 0 0 20px;
   a {
     color: $dark_blue;
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5em;
     text-decoration: none;
   }
@@ -540,6 +535,13 @@ ul.tags {
       p {
         font-size: .7em;
       }
+    }
+    p.line_one,
+    p.line_two,
+    p.line_three {
+      font-family: serif !important;
+      font-size: 2em;
+      line-height: 2.2em;
     }
   }
   #sidebar {
