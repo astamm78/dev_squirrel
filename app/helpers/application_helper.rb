@@ -14,4 +14,12 @@ module ApplicationHelper
     a[0...n].join(' ') + (a.size > n ? '...' : '')
   end
 
+  def recent_posts
+    Post.limit(3)
+  end
+
+  def recent_tweets
+    Twitter.user_timeline("astamm78", :count => 3)
+  end
+
 end

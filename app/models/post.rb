@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
 
   before_save :clean_html, :line_breaks
 
+  default_scope :order => 'created_at DESC'
+
   self.per_page = 4
 
   def posted_on
