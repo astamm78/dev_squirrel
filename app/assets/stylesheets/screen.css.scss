@@ -224,6 +224,227 @@ footer {
   }
 }
 
+input[type=email], input[type=password], input[type=text], textarea {
+    border: 5px solid white;
+    font-size: 22px;
+    -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    box-shadow: -2px 2px 4px gray;
+    margin: 0 0 10px 0;
+    width: 786px;
+}
+
+textarea {
+  height: 300px;
+}
+
+.regular-checkbox {
+  float: left;
+  margin-right: 20px;
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+    inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+    top: 4px;
+}
+
+.regular-checkbox:active, .regular-checkbox:checked:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+    inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+    inset 0px -15px 10px -12px rgba(0,0,0,0.05),
+    inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #99a1a7;
+}
+
+.regular-checkbox:checked:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #99a1a7;
+}
+
+button {
+  background: #ec008c;
+  border: none;
+  box-shadow: -2px 2px 4px gray;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  &:hover {
+    background: #00aeef;
+    cursor: pointer;
+  }
+}
+
+input#photo_image {
+  color: gray;
+  font-size: 18px;
+  margin: 0 0 18px;
+  width: 100%;
+}
+
+/* Admin */
+
+#content #new_content {
+  border-bottom: none;
+  li {
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    margin: 0 20px 0 0;
+    a {
+      color: $cyan;
+      text-decoration: none;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
+
+a.admin_close {
+  color: gray;
+  text-decoration: none;
+}
+
+/* Haiku */
+
+body.haiku #sidebar {
+  display: none;
+}
+
+#content p.line_one,
+#content p.line_two,
+#content p.line_three {
+  color: gray;
+  font-family: serif !important;
+  font-size: 3em;
+  line-height: 74px;
+  margin: 0px;
+  text-align: left;
+}
+
+.haiku {
+  margin: 0 0 40px;
+}
+
+/* Blog Pages */
+
+h3, h3.post_title {
+  color: $dark-gray;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4em;
+  margin: 0 0 20px;
+  a {
+    color: $dark_blue;
+    text-decoration: none;
+  }
+}
+
+body.single_post {
+  h3 {
+    a {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+body.tags h3 {
+  margin: 0 0 20px;
+  a {
+    color: $dark_blue;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+}
+
+#content ul.tags {
+  border: none;
+}
+
+h3.post_title a:hover,
+body.tags h3 a:hover {
+  color: gray;
+}
+
+.post {
+  border-bottom: solid 6px rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  margin: 0 0 50px;
+  padding: 10px 0 20px;
+}
+
+p.post_time {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.5em;
+}
+
+ul.tags {
+  color: gray;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.8em;
+  margin: 0 0 20px;
+  li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    a {
+      color: $dark_blue;
+      text-decoration: none;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
+
+.pagination {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  font-weight: lighter;
+  text-align: center;
+  width: 100%;
+  a {
+    color: gray;
+    text-decoration: none;
+    &:hover {
+      color: $dark_blue;
+    }
+  }
+}
+
+.pagination a, .pagination .disabled, .pagination .current {
+  padding: 0 14px;
+}
+
+.pagination .disabled {
+  color: white;
+}
+
 @media screen and (max-width: 1110px) {
   #nav {
     #home_nav {
