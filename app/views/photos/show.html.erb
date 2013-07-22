@@ -1,6 +1,6 @@
 <a class="image_close" href="#">close</a>
 <%= link_to 'delete', photo_path(@photo.id), :method => :delete, :class => "delete righty" if current_user %>
-<%= image_tag @photo.image(:large), :size => '920x616' %>
+<%= image_tag @photo.image(:original) %>
 <p class="exif">
   Taken on <%= @photo.taken_at.strftime("%B %d, %Y") %>
   with a <%= @photo.camera %> •
