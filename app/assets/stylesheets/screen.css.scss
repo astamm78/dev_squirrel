@@ -43,7 +43,6 @@ header {
   margin-bottom: 60px;
   position: relative;
   width: 100%;
-  z-index: 50;
   .page {
     position: relative;
     #logo {
@@ -91,7 +90,6 @@ header {
   margin-top: -40px;
   margin-right: 0.857143%;
   width: 60%; // 960/700
-  z-index: 100;
   #home_nav {
     text-align: right;
     width: 100%;
@@ -183,28 +181,6 @@ body.haiku #home_nav li a.haiku_link {
           color: $dark-gray;
         }
       }
-    }
-  }
-}
-
-.full_size {
-  background: rgba(255,255,255,.95);
-  border-radius: 2px;
-  box-shadow: 0 0 25px $dark-gray;
-  padding: 20px;
-  position: fixed;
-    top: 40px;
-    left: 50%;
-    margin-left: -480px;
-  width: 920px;
-  a.image_close, a.delete {
-    color: gray;
-    font-family: 'Source Sans Pro', sans-serif !important;
-    position: relative;
-      bottom: 8px;
-    text-decoration: none;
-    &:hover {
-      color: $magenta;
     }
   }
 }
@@ -439,6 +415,71 @@ ul.tags {
 .pagination .disabled {
   color: white;
 }
+
+/* Photos */
+
+.gallery {
+  margin: 18px 0 18px -16px;
+  a img {
+    border: solid 2px white;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    &:hover {
+      border: solid 2px $dark_blue;
+    }
+  }
+}
+
+/* Photo Page */
+
+.full_size {
+  background: rgba(255,255,255,.95);
+  border-radius: 2px;
+  box-shadow: 0 0 25px $dark-gray;
+  padding: 20px;
+  position: fixed;
+    top: 30px;
+    left: 50%;
+    margin-left: -480px;
+  width: 920px;
+  a.image_close, a.delete {
+    color: gray;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    position: relative;
+      bottom: 8px;
+    text-decoration: none;
+    &:hover {
+      color: $dark_blue;
+    }
+  }
+}
+
+#content {
+  ul.popup_nav {
+    border-bottom: none;
+    margin: 0px;
+    li {
+      display: inline;
+      list-style: none;
+      a {
+        color: gray;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        margin: 0 8px 0 0;
+        text-decoration: none;
+        &:hover {
+          color: $dark_blue;
+        }
+      }
+    }
+  }
+}
+
+p.exif {
+  font-size: .9em;
+  margin: 0px;
+}
+
+/* Breakpoints */
 
 @media screen and (max-width: 1110px) {
   #nav {
