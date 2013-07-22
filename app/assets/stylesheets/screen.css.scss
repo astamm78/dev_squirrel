@@ -159,7 +159,7 @@ body.haiku #home_nav li a.haiku_link {
 
 #sidebar {
   float: left;
-  margin-top: 22%;
+  margin-top: 23%;
   margin-left: 2.083333333333%;
   width: 23.125%;
   h2 {
@@ -637,6 +637,19 @@ p.exif {
       margin-left: 0px;
       margin-bottom: 0px;
       width: 98%;
+    }
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  #content {
+    width: 60%;
+  }
+  #sidebar {
+    width: 37%;
+    .widget {
+      width: 48%;
+      float: left;
     }
   }
 }
