@@ -19,7 +19,7 @@ module ApplicationHelper
   end
 
   def recent_tweets
-    Twitter.user_timeline("astamm78", :count => 3)
+    Twitter.user_timeline("astamm78", :exclude_replies => true, :include_rts => false)[0..2]
   end
 
 end
