@@ -50,8 +50,10 @@ describe "On Blog Page" do
 
   it "should link to a single blog post" do
     visit posts_path
-    click_link('Test Post')
-    page.should have_css('h3.post_title')
+    within('.main_box') do
+      click_link('Test Post')
+      page.should have_css('h3.post_title')
+    end
   end
 
   it "should have the correct body class" do
