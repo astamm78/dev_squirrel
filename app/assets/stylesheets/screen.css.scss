@@ -215,23 +215,22 @@ footer {
   }
 }
 
+/* Forms */
+
+form {
+  margin: 0 0 2%;
+  label {
+    position: relative;
+      top: 8px;
+  }
+}
+
 input[type=email], input[type=password], input[type=text], textarea {
-    border: 5px solid white;
-    font-size: 22px;
-    -webkit-box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    -moz-box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    padding: 15px;
-    background: rgba(255,255,255,0.5);
-    box-shadow: -2px 2px 4px gray;
-    margin: 0 0 10px 0;
-    width: 786px;
+    font-size: 1.4em;
+    padding: 2%;
+    background: $light-gray;
+    margin: 0 0 2% 0;
+    width: 96%;
 }
 
 textarea {
@@ -277,7 +276,7 @@ textarea {
 }
 
 button {
-  background: #ec008c;
+  background: $dark_blue;
   border: none;
   box-shadow: -2px 2px 4px gray;
   color: white;
@@ -306,7 +305,7 @@ input#photo_image {
     font-size: 24px;
     margin: 0 20px 0 0;
     a {
-      color: $cyan;
+      color: $dark_blue;
       text-decoration: none;
       &:hover {
         color: gray;
@@ -317,6 +316,9 @@ input#photo_image {
 
 a.admin_close {
   color: gray;
+  display: block;
+  font-size: 2em;
+  margin: 0 0 12px;
   text-decoration: none;
 }
 
