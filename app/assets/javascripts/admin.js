@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('#new_content').toggle();
   });
 
-  $('.container').on('click', 'a.admin_close', function(event) {
+  $('.main_box').on('click', 'a.admin_close', function(event) {
     event.preventDefault();
     $(this).closest('.entry').toggle();
     $('#new_content').toggle();
