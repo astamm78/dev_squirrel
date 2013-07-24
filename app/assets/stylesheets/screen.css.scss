@@ -8,11 +8,15 @@ $light-gray: #ebebeb;
 $med-gray: #959595;
 $dark-gray: #646568;
 
+/* Main */
+
 body {
   background: $light-gray;
   color: $dark-gray;
   font: normal 100% sans-serif;
 }
+
+/* Helpers */
 
 .clear {
   clear: both;
@@ -29,11 +33,15 @@ body {
   width: 90%;
 }
 
+/* Typography */
+
 h1, h2, h3, h4, h5 {
   color: $med-gray;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: -0.06em;
 }
+
+/* Header */
 
 header {
   background: $med-gray;
@@ -128,6 +136,8 @@ body.haiku #home_nav li a.haiku_link {
   color: $dark_blue;
 }
 
+/* Main Column */
+
 #content {
   background: $yellow;
   border-radius: 8px;
@@ -158,6 +168,8 @@ body.haiku #home_nav li a.haiku_link {
   }
 }
 
+/* Sidebar */
+
 #sidebar {
   float: left;
   margin-top: 23%;
@@ -185,6 +197,8 @@ body.haiku #home_nav li a.haiku_link {
     }
   }
 }
+
+/* Footer */
 
 footer {
   color: $dark-gray;
@@ -392,6 +406,8 @@ ul.tags {
     }
   }
 }
+
+/* Pagination */
 
 .pagination {
   color: white;
