@@ -13,11 +13,8 @@
   <h3>New Post</h3>
   <h4><a class="admin_close" href="#">Close</a></h4>
   <%= form_for @post do |p| %>
-    <%= p.label :title, "Title" %>
     <%= p.text_field :title, :placeholder => "Post Title" %>
-    <%= p.label :body, "Body" %>
     <%= p.text_area :body, :placeholder => "Post Body" %>
-    <%= p.label :tags, "Tags" %>
     <%= p.text_field :tags, :value => nil, :placeholder => "Tags" %>
     <%= check_box_tag(:tweet, '1', false, :class=> "regular-checkbox") %>
     <%= label_tag(:tweet, "Tweet this post?") %>
@@ -29,7 +26,6 @@
   <h3>New Photo</h3>
   <h4><a class="admin_close" href="#">Close</a></h4>
   <%= form_for @photo do |f| %>
-    <%= f.label :image %>
     <%= f.file_field :image %>
     <%= f.button "Add Image" %>
   <% end %>
