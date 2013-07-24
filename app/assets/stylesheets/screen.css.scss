@@ -100,6 +100,7 @@ header {
     }
   }
   #web_links {
+    margin: 0 0 12px;
     text-align: right;
     li {
       display: inline-block;
@@ -134,7 +135,7 @@ body.haiku #home_nav li a.haiku_link {
   margin-bottom: 5%;
   width: 72.916666666667%; // 960/700
   .main_box {
-    padding: 2.857142857143%;
+    padding: 1% 2.857142857143%;
     position: relative;
     h2 {
       font-size: 4em;
@@ -397,10 +398,13 @@ ul.tags {
   font-family: sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
+  position: relative;
+    bottom: 8px;
   text-align: center;
   width: 100%;
   a {
     color: gray;
+    font-weight: bold;
     text-decoration: none;
     &:hover {
       color: $dark_blue;
@@ -409,10 +413,12 @@ ul.tags {
 }
 
 .pagination a, .pagination .disabled, .pagination .current {
+  font-weight: bold;
   padding: 0 14px;
 }
 
 .pagination .disabled {
+  font-weight: bold;
   color: white;
 }
 
@@ -508,6 +514,22 @@ p.exif {
   }
 }
 
+@media screen and (max-width: 1010px) {
+  header {
+    height: 60px;
+  }
+  h1 {
+    font-size: 5em !important;
+    top: -19px !important;
+  }
+  #content p.line_one,
+  #content p.line_two,
+  #content p.line_three {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .gallery {
     margin: 18px 0 18px -3.8%;
@@ -516,16 +538,6 @@ p.exif {
       margin-bottom: 3.8%;
       width: 29%;
     }
-  }
-}
-
-@media screen and (max-width: 1010px) {
-  header {
-    height: 60px;
-  }
-  h1 {
-    font-size: 5em !important;
-    top: -19px !important;
   }
 }
 
@@ -625,9 +637,8 @@ p.exif {
     p.line_one,
     p.line_two,
     p.line_three {
-      font-family: serif !important;
       font-size: 2em;
-      line-height: 2.2em;
+      line-height: 1.5em;
     }
   }
   #sidebar {
@@ -642,7 +653,8 @@ p.exif {
     }
     .widget {
       float: none;
-      width: 100%;
+      padding: 0 5%;
+      width: 90%;
     }
   }
     .gallery {
