@@ -2,22 +2,18 @@
   <div class="widget">
     <% if recent_posts %>
       <h2>Recent Posts:</h2>
-      <ul>
       <% recent_posts.each do |post| %>
-        <li><%= link_to post.title, post_path(post.id) %></li>
+        <p><%= link_to post.title, post_path(post.id) %></p>
       <% end %>
-      </ul>
     <% end %>
   </div>
 
   <div class="widget">
     <% if recent_tweets %>
       <h2>Recent Tweets:</h2>
-      <ul>
       <% recent_tweets.each do |tweet| %>
-        <li><%= link_to tweet.tweet, 'http://twitter.com/astamm78', :target => '_blank' %></li>
+        <p><%= link_to tweet.tweet, 'http://twitter.com/astamm78', :target => '_blank' %></p>
       <% end %>
-      </ul>
     <% end %>
   </div>
 </div>

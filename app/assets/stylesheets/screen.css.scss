@@ -181,15 +181,15 @@ body.haiku #home_nav li a.haiku_link {
   }
   .widget {
     margin-bottom: 22px;
-  }
-  ul {
-    li {
-      font-size: 1.1em;
+    p {
+      font-size: 1em;
       margin: 0 0 6%;
       a {
         color: $dark_blue;
         font-weight: bold;
         text-decoration: none;
+        word-wrap: break-word;
+        width: 100%;
         &:hover {
           color: $dark-gray;
         }
@@ -690,9 +690,10 @@ p.exif {
     width: 60%;
   }
   #sidebar {
-    width: 37%;
+    width: 37.9%;
     .widget {
-      width: 48%;
+      margin: 0 4% 0 0;
+      width: 46%;
       float: left;
     }
   }
