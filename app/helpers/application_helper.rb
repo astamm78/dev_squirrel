@@ -23,6 +23,7 @@ module ApplicationHelper
       Twitter.user_timeline("astamm78", :exclude_replies => true, :include_rts => false).each do |t|
         Tweet.create(tweet_id: t.id, tweet: t.text)
       end
+      Tweet.first.update_attributes(:updated_at => Time.now)
     end
     Tweet.limit(3)
   end
