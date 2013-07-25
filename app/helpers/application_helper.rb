@@ -19,7 +19,12 @@ module ApplicationHelper
   end
 
   def recent_tweets
-    @_tweets ||= Twitter.user_timeline("astamm78", :exclude_replies => true, :include_rts => false)[0..2]
+    if Tweet.stale?
+      Twitter.user_timeline("astamm78", :exclude_replies => true, :include_rts => false).each do |t|
+        Tweet.create(tweet_id: t.id, tweet: t.text)
+      end
+    end
+    Tweet.limit(3)
   end
 
 end
