@@ -57,9 +57,7 @@ header {
       h1 {
         font-size: 7.07875em; // 113.26/16
         text-align: right;
-        position: absolute;
-          top: -29px;
-          right: 2.857142857143%;
+        position: absolute; top: -29px; right: 2.857142857143%;
         a {
           color: $light-gray;
           text-decoration: none;
@@ -78,8 +76,7 @@ header {
     #squirrel {
       float: left;
       margin-left: -5%;
-      position: absolute;
-        left: 4%;
+      position: absolute; left: 4%;
       width: 34%;
       z-index: 100;
       img {
@@ -220,8 +217,7 @@ footer {
 form {
   margin: 0 0 2%;
   label {
-    position: relative;
-      top: 8px;
+    position: relative; top: 8px;
   }
 }
 
@@ -248,8 +244,7 @@ textarea {
   padding: 9px;
   border-radius: 3px;
   display: inline-block;
-  position: relative;
-    top: 4px;
+  position: relative; top: 4px;
 }
 
 .regular-checkbox:active, .regular-checkbox:checked:active {
@@ -416,8 +411,7 @@ ul.tags {
   font-family: sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
-  position: relative;
-    bottom: 8px;
+  position: relative; bottom: 8px;
   text-align: center;
   width: 100%;
   a {
@@ -461,9 +455,7 @@ ul.tags {
   border-radius: 2px;
   box-shadow: 0 0 25px $dark-gray;
   padding: 2%;
-  position: fixed;
-    top: 30px;
-    left: 20%;
+  position: fixed; top: 30px; left: 20%;
   width: 60%;
   z-index: 101;
   img {
@@ -473,8 +465,7 @@ ul.tags {
   a.image_close, a.delete {
     color: gray;
     font-family: 'Source Sans Pro', sans-serif !important;
-    position: relative;
-      bottom: 8px;
+    position: relative; bottom: 8px;
     text-decoration: none;
     &:hover {
       color: $dark_blue;
@@ -590,9 +581,7 @@ p.exif {
     border-radius: 2px;
     box-shadow: 0 0 25px $dark-gray;
     padding: 5% 5%;
-    position: fixed;
-      top: 30px;
-      left: 0;
+    position: fixed; top: 30px; left: 0;
     width: 90%;
     img {
       max-width: 100%;
