@@ -17,6 +17,7 @@ gem "nokogiri", "~> 1.6.0"
 gem 'twitter'
 gem 'figaro'
 gem 'sanitize'
+gem 'rails_autolink'
 
 gem 'newrelic_rpm'
 
